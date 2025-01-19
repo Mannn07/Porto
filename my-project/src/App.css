@@ -1,0 +1,26 @@
+/* App.css */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+  margin: 0; /* Hapus margin */
+  padding: 0; /* Hapus padding */
+  height: 100vh; /* Pastikan body mengisi seluruh tinggi viewport */
+}
+
+#root {
+  height: 100vh; /* Pastikan root mengisi seluruh tinggi */
+  width: 100%; /* Pastikan root mengisi seluruh lebar */
+  background-color: #121212; /* Warna latar belakang hitam */
+}
+
+/* Jika Anda ingin menambahkan .bg-dark di dalam elemen lain */
+.bg-dark {
+  background-color: #121212; /* Warna latar belakang hitam */
+}
+
+/* Jika Anda perlu memformat kontainer utama */
+.container {
+  max-width: 1280px; /* Sesuaikan dengan lebar maksimal */
+  margin: 0 auto; /* Tengahakan kontainer */
+  padding: 2rem; /* Tambahkan padding di dalam kontainer */
+}

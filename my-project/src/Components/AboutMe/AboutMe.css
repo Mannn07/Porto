@@ -1,0 +1,185 @@
+/* Overall Layout */
+* {
+  box-sizing: border-box; /* Agar padding dan border dihitung dalam total ukuran elemen */
+}
+
+.about-me-container {
+  display: flex;
+  height: 130vh; /* Gunakan 100vh agar tidak terpotong */
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 2rem;
+  flex-direction: row; /* Mengatur arah flex secara horizontal */
+  overflow: hidden; /* Menyembunyikan elemen yang meluap */
+  justify-content: center; /* Memastikan elemen berada di tengah */
+  align-items: flex-start; /* Mengatur elemen agar tidak terjepit di bagian bawah */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Left Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #121212;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
+  margin-right: 2rem;
+  text-align: center;
+  height: 121vh;
+}
+
+.profile-image1 {
+  width: 180px;
+  height: auto;
+  border-radius: 7%;
+  object-fit: cover;
+  background: #0a0a0a;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 1;
+  background-color: #121212;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #333;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Content Column Styles */
+.content-column {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 200px;
+}
+
+/* Title and content styles */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ff69b4;
+  margin-bottom: 0.5rem;
+}
+
+.section-content {
+  font-size: 1rem;
+  color: #bbbbbb;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-icon:active {
+  transform: scale(0.95);
+}
+
+.work-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff69b4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.work-button:hover {
+  background-color: #ff85c2;
+  transform: translateY(-2px);
+}
+
+.work-button:active {
+  transform: translateY(2px);
+}
+
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .about-me-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; /* Mengurangi padding agar lebih pas di layar kecil */
+    height: auto; /* Menghindari elemen yang terpotong */
+  }
+
+  .sidebar {
+    width: 100%; /* Sidebar menjadi penuh pada ukuran layar kecil */
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1.5rem; /* Mengurangi padding pada tampilan mobile */
+  }
+
+  .content-column {
+    flex: 1 1 100%; /* Mengatur kolom agar full width pada layar kecil */
+    min-width: 100%; /* Menghindari kolom terlalu sempit */
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  /* For Contact Section */
+  .contact-section {
+    padding: 2rem 1rem; /* Menyesuaikan padding untuk layar kecil */
+  }
+
+  .contact-content {
+    margin-right: 0;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-link {
+    margin-top: 1rem;
+    width: 80px; /* Mengubah ukuran icon sosial */
+    height: 80px;
+  }
+}

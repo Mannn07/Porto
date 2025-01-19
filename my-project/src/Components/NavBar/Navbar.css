@@ -1,0 +1,87 @@
+/* Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0); /* Latar belakang transparan */
+  backdrop-filter: blur(10px); /* Efek blur */
+  color: white;
+  z-index: 20;
+  transition: background 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center; /* Center items */
+  align-items: center;
+  height: 60px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px; /* Jarak antar item */
+}
+
+.navbar-item {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 9999px; /* Membuat item menjadi oval */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:hover {
+  background: linear-gradient(to right, #bf5fe6, #ff69b4); /* Gradien hover */
+  color: white;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.navbar-mobile {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.navbar-mobile-item {
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.navbar-mobile-item:hover {
+  background: linear-gradient(to right, #bf5fe6, #ff69b4);
+  color: white;
+}
+
+/* Responsif: Hanya tampilkan toggle di layar kecil */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Sembunyikan link di desktop */
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
